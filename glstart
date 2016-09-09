@@ -1,0 +1,13 @@
+#!/bin/bash
+# @author: Methusael Murmu
+
+user_name="$USER"
+let xdisplay=${DISPLAY:1}+1
+
+xinit_shell="$(mktemp -t opengl_init.XXXXXXX)" || exit
+trap "rm -f -- '$xinit_shell'" EXIT
+
+cd bin
+echo "sudo -u $user_name ./\"$@\"" > "$xinit_shell"
+xinit "$xinit_shell" -- :$xdisplay 2> /dev/null
+cd ..
