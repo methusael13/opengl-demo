@@ -4,6 +4,8 @@
 /**
  * @author: Methusael Murmu
  */
+ 
+/* Define common types for convenience */
 
 #include <external/glm/vec2.hpp>
 #include <external/glm/vec3.hpp>
