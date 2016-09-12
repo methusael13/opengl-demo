@@ -132,6 +132,7 @@ struct RenderContext {
 };
 
 #define ATTENUATION_MAP_SZ 12
+// Each component: { distance, linear coefficient, quadratic coefficient }
 const GLfloat kAttenuationMap[ATTENUATION_MAP_SZ][3] = {
     {7,   0.7,   1.8},      {13,   0.35,   0.44},
     {20,  0.22,  0.2},      {32,   0.14,   0.07},
