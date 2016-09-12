@@ -6,6 +6,7 @@
  */
 
 #include <external/GL/gl3w.h>
+// Support only OpenGL Core profile
 #define GLFW_INCLUDE_GLCOREARB
 #include <GLFW/glfw3.h>
 
